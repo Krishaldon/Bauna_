@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pradhan Mantri Bauna Kalyan Yojana (PM-BKY) | Official Portal</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Tiro+Devanagari+Hindi:ital@0;1&family=Cinzel:wght@700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        govNavy: '#002147',
+                        govSaffron: '#FF9933',
+                        govGreen: '#138808',
+                        govGold: '#D4AF37',
+                        govRed: '#cc0000',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        hindi: ['Tiro Devanagari Hindi', 'serif'],
+                        official: ['Cinzel', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes pulse-fast {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+        .animate-pulse-fast {
+            animation: pulse-fast 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        .stamp-rotate {
+            transform: rotate(-12deg);
+        }
+        /* Custom Government Marquee */
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .marquee-text {
+            display: inline-block;
+            animation: marquee 25s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans text-gray-900 min-h-screen flex flex-col">
+
+    <!-- Top Gov Bar Header -->
+    <div class="bg-govNavy text-white text-xs py-1 px-4 flex justify-between items-center border-b-2 border-govSaffron">
+        <div class="flex items-center space-x-3">
+            <span class="flex items-center space-x-1">
+                <span class="inline-block w-2.5 h-2.5 bg-govSaffron rounded-full"></span>
+                <span class="inline-block w-2.5 h-2.5 bg-white rounded-full"></span>
+                <span class="inline-block w-2.5 h-2.5 bg-govGreen rounded-full"></span>
+            </span>
+            <span class="font-semibold tracking-wide">GOVERNMENT OF INDIA / भारत सरकार</span>
+        </div>
+        <div class="hidden sm:flex items-center space-x-4">
+            <span class="hover:underline cursor-pointer">Skip to main content</span>
+            <span>|</span>
+            <span class="cursor-pointer">Text Size: <button class="px-1 text-xs bg-gray-700 rounded">A-</button> <button class="px-1 text-xs bg-gray-700 rounded">A</button> <button class="px-1 text-xs bg-gray-700 rounded">A+</button></span>
+            <span>|</span>
+            <span class="font-bold text-yellow-300">Hindi / English</span>
+        </div>
+    </div>
+
+    <!-- Main Official Header -->
+    <header class="bg-white border-b shadow-md py-3 px-4 sm:px-8">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <!-- Left Emblem & Title -->
+            <div class="flex items-center space-x-4 text-center sm:text-left">
+                <!-- Emblem SVG -->
+                <div class="w-16 h-16 flex-shrink-0 flex items-center justify-center">
+                    <svg viewBox="0 0 100 100" class="w-full h-full text-govNavy fill-current">
+                        <circle cx="50" cy="50" r="45" fill="none" stroke="#002147" stroke-width="3"/>
+                        <circle cx="50" cy="50" r="40" fill="none" stroke="#FF9933" stroke-width="1.5"/>
+                        <!-- Stylized Emblem Center -->
+                        <path d="M50 15 L58 35 L80 35 L62 48 L68 70 L50 56 L32 70 L38 48 L20 35 L42 35 Z" fill="#D4AF37"/>
+                        <text x="50" y="85" font-size="8" text-anchor="middle" font-weight="bold" fill="#002147">सत्यमेव जयते</text>
+                    </svg>
+                </div>
+                <div>
+                    <h1 class="text-xl sm:text-2xl font-extrabold text-govNavy font-hindi leading-tight">
+                        प्रधानमंत्री बौना कल्याण योजना (PM-BKY)
+                    </h1>
+                    <h2 class="text-xs sm:text-sm font-semibold text-gray-700 tracking-wider uppercase font-official">
+                        Ministry of Short Affairs & Vertical Equality
+                    </h2>
+                    <p class="text-[10px] text-gray-500">Department of Low Stature Welfare & Height Pension (DLSHP)</p>
+                </div>
+            </div>
+
+            <!-- Right Official Scheme Badge -->
+            <div class="flex items-center bg-yellow-50 border border-yellow-300 p-2.5 rounded-lg shadow-sm">
+                <div class="text-center px-2 border-r border-yellow-200">
+                    <span class="text-xs text-gray-500 font-semibold uppercase block">Monthly Allowance</span>
+                    <span class="text-xl font-black text-govGreen">₹3,000 / PM</span>
+                </div>
+                <div class="pl-3 text-xs text-left">
+                    <span class="inline-block bg-red-600 text-white font-bold px-1.5 py-0.5 rounded text-[10px] animate-pulse">DIRECT BENEFIT</span>
+                    <p class="text-gray-700 font-medium">Scheme Code: <span class="font-mono font-bold">BKY-2026</span></p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Urgent Ticker Bar -->
+    <div class="bg-govRed text-white py-2 px-4 flex items-center shadow-inner">
+        <span class="bg-yellow-400 text-black font-extrabold text-xs px-2 py-0.5 rounded mr-3 flex-shrink-0 animate-bounce">
+            URGENT NOTICE
+        </span>
+        <div class="marquee-container text-xs sm:text-sm font-semibold tracking-wide flex-1">
+            <span class="marquee-text">
+                🚨 ATTENTION ALL SHORT CITIZENS: Last date to claim ₹3,000/month Bauna Bhatta Pension is TODAY! Height physical verification satellite scan active. Apply immediately before quota closes! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 🚨 सूचना: 3000/महीना बौना भत्ता पेंशन योजना का लाभ उठाने की अंतिम तिथि आज है! तुरंत फॉर्म भरें।
+            </span>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="bg-govNavy text-white text-xs font-semibold uppercase tracking-wider hidden md:block">
+        <div class="max-w-7xl mx-auto flex">
+            <a href="#" class="px-4 py-3 bg-govSaffron text-white font-bold">Home Portal</a>
+            <a href="#form-section" class="px-4 py-3 hover:bg-blue-900 transition">Online Application</a>
+            <a href="#guidelines" class="px-4 py-3 hover:bg-blue-900 transition">Height Standards</a>
+            <a href="#status" class="px-4 py-3 hover:bg-blue-900 transition">Check Claim Status</a>
+            <a href="#contact" class="px-4 py-3 hover:bg-blue-900 transition">Helpline 1800-SHORT-PEOPLE</a>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="max-w-7xl mx-auto px-3 sm:px-6 py-6 flex-1 w-full grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+        <!-- Left Column: Guidelines & Alerts (1 col on desktop) -->
+        <div class="space-y-6 lg:col-span-1">
+            
+            <!-- Scheme Notification Card -->
+            <div class="bg-white rounded-lg shadow border border-gray-200 overflow-hidden">
+                <div class="bg-govNavy text-white p-3 font-bold text-sm flex items-center justify-between">
+                    <span><i class="fa-solid fa-circle-info text-govSaffron mr-2"></i> Eligibility Guidelines</span>
+                    <span class="text-[10px] bg-red-500 text-white px-2 py-0.5 rounded-full">STRICT</span>
+                </div>
+                <div class="p-4 text-xs space-y-3 text-gray-700">
+                    <p class="font-medium text-gray-900 border-b pb-2">
+                        Under Section 42-B of the <i>Vertical Stature Equality Act</i>, individuals with compact stature are eligible for financial assistance.
+                    </p>
+                    <ul class="space-y-2 list-disc list-inside text-gray-600">
+                        <li><strong>Max Height Limit:</strong> Must be strictly ≤ 162 cm (approx 5'4").</li>
+                        <li><strong>Shoe Requirement:</strong> Must wear shoes from Kids Section (UK 3 to UK 7).</li>
+                        <li><strong>Struggle Proof:</strong> Must struggle to reach top kitchen shelves or dangle feet off standard chairs.</li>
+                        <li><strong>Allowance:</strong> ₹3,000 Direct Benefit Transfer (DBT) per month.</li>
+                    </ul>
+                    <div class="bg-blue-50 border-l-4 border-govNavy p-2.5 text-[11px] rounded">
+                        <strong>Note:</strong> Applicants wearing high heels, elevator shoes, or standing on toes during measurement will be permanently banned.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Prime Minister Message Card -->
+            <div class="bg-white rounded-lg shadow border border-gray-200 p-4 relative overflow-hidden">
+                <div class="absolute -right-4 -bottom-4 opacity-10">
+                    <i class="fa-solid fa-ribbon text-8xl text-govNavy"></i>
+                </div>
+                <div class="flex items-center space-x-3 border-b pb-3 mb-3">
+                    <div class="w-12 h-12 rounded-full bg-yellow-200 border-2 border-govSaffron flex items-center justify-center font-bold text-lg text-govNavy">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-900 text-sm">Hon' Minister's Message</h3>
+                        <p class="text-[11px] text-gray-500">Ministry of Short Stature Affairs</p>
+                    </div>
+                </div>
+                <blockquote class="text-xs italic text-gray-700 leading-relaxed">
+                    "No citizen should feel small in society—except when claiming their official ₹3,000 monthly Bauna Bhatta. We stand tall behind every short citizen!"
+                </blockquote>
+            </div>
+
+            <!-- Live Applicant Counter Widget -->
+            <div class="bg-gradient-to-br from-govNavy to-blue-900 text-white rounded-lg shadow p-4 text-center">
+                <span class="text-xs uppercase tracking-widest text-govSaffron font-bold block mb-1">Live Applications Today</span>
+                <div class="text-3xl font-mono font-black text-yellow-300" id="liveCounter">48,291</div>
+                <p class="text-[10px] text-gray-300 mt-1">Verified via Satellite Stature Radar</p>
+            </div>
+
+            <!-- Fake Government Helpline -->
+            <div class="bg-yellow-100 border border-yellow-400 rounded-lg p-3 text-xs text-yellow-900 flex items-center space-x-3">
+                <i class="fa-solid fa-headset text-2xl text-yellow-700"></i>
+                <div>
+                    <span class="font-bold block">Toll-Free Bauna Helpline:</span>
+                    <span class="font-mono text-sm font-bold text-govNavy">1800-BAUNA-HELP (1800-344-448)</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Right Column: Official Interactive Application Form (2 cols on desktop) -->
+        <div class="lg:col-span-2">
+            <div id="form-section" class="bg-white rounded-lg shadow-lg border-2 border-govNavy overflow-hidden">
+                
+                <!-- Form Top Banner -->
+                <div class="bg-govNavy text-white px-6 py-4 flex justify-between items-center border-b-4 border-govSaffron">
+                    <div>
+                        <h2 class="text-lg font-extrabold uppercase font-official tracking-wide text-white">
+                            Form BKY-101: Scheme Application
+                        </h2>
+                        <p class="text-xs text-yellow-300">Application for National Short Height Pension Scheme</p>
+                    </div>
+                    <span class="hidden sm:inline-block bg-govGreen text-white text-[10px] font-extrabold px-2.5 py-1 rounded-full uppercase">
+                        Official Application
+                    </span>
+                </div>
+
+                <!-- Form Body -->
+                <form id="baunaForm" onsubmit="handleFormSubmit(event)" class="p-6 space-y-6">
+                    
+                    <!-- Section 1: Personal Details -->
+                    <div class="space-y-4">
+                        <h3 class="text-xs font-extrabold uppercase tracking-wider text-govNavy border-b-2 border-gray-200 pb-1 flex items-center">
+                            <span class="bg-govNavy text-white w-5 h-5 rounded-full inline-flex items-center justify-center text-[10px] mr-2">1</span>
+                            Applicant Basic Information
+                        </h3>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <!-- Full Name -->
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 mb-1">
+                                    Full Name of Applicant <span class="text-red-600">*</span>
+                                </label>
+                                <input type="text" id="applicantName" required placeholder="e.g. Chhotu Sharma" 
+                                    class="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:ring-2 focus:ring-govNavy focus:outline-none">
+                            </div>
+
+                            <!-- Father / Guardian Name -->
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 mb-1">
+                                    Father's / Guardian's Name <span class="text-red-600">*</span>
+                                </label>
+                                <input type="text" id="guardianName" required placeholder="e.g. Lambu Sharma" 
+                                    class="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:ring-2 focus:ring-govNavy focus:outline-none">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 2: Height & Physical Metrics Validation -->
+                    <div class="space-y-4">
+                        <h3 class="text-xs font-extrabold uppercase tracking-wider text-govNavy border-b-2 border-gray-200 pb-1 flex items-center">
+                            <span class="bg-govNavy text-white w-5 h-5 rounded-full inline-flex items-center justify-center text-[10px] mr-2">2</span>
+                            Stature & Height Verification (Strict)
+                        </h3>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <!-- Height Input -->
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 mb-1">
+                                    Exact Height in Centimeters (cm) <span class="text-red-600">*</span>
+                                </label>
+                                <div class="relative">
+                                    <input type="number" id="heightInput" required min="50" max="250" placeholder="e.g. 152" oninput="validateHeight()"
+                                        class="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:ring-2 focus:ring-govNavy focus:outline-none">
+                                    <span class="absolute right-3 top-2 text-xs font-bold text-gray-400">cm</span>
+                                </div>
+                                <p class="text-[11px] text-gray-500 mt-1">Maximum eligible limit: <strong class="text-red-600">162 cm (5'4")</strong></p>
+                            </div>
+
+                            <!-- Shoe Size Dropdown -->
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 mb-1">
+                                    Shoe Size (UK / India) <span class="text-red-600">*</span>
+                                </label>
+                                <select id="shoeSize" required class="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:ring-2 focus:ring-govNavy focus:outline-none bg-white">
+                                    <option value="">-- Select Shoe Size --</option>
+                                    <option value="Kids Section (UK 3)">Kids Section (UK 3) - Extra Pension Eligible</option>
+                                    <option value="UK 4">UK 4 (Junior)</option>
+                                    <option value="UK 5">UK 5 (Small)</option>
+                                    <option value="UK 6">UK 6 (Compact)</option>
+                                    <option value="UK 7 (Max Limit)">UK 7 (Maximum Cutoff Limit)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- LIVE DYNAMIC HEIGHT ALERT BOX -->
+                        <div id="heightAlert" class="hidden rounded-md p-3 text-xs transition-all duration-300"></div>
+                    </div>
+
+                    <!-- Section 3: Daily Struggles Checklist -->
+                    <div class="space-y-3">
+                        <h3 class="text-xs font-extrabold uppercase tracking-wider text-govNavy border-b-2 border-gray-200 pb-1 flex items-center">
+                            <span class="bg-govNavy text-white w-5 h-5 rounded-full inline-flex items-center justify-center text-[10px] mr-2">3</span>
+                            Daily Bauna Struggles Checklist (Select all that apply)
+                        </h3>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-gray-800">
+                            <label class="flex items-start space-x-2 bg-gray-50 p-2.5 rounded border border-gray-200 cursor-pointer hover:bg-yellow-50">
+                                <input type="checkbox" name="struggle" value="Kitchen Stool User" class="mt-0.5 rounded text-govNavy focus:ring-govNavy">
+                                <span>Need a stool / chair to reach the top kitchen shelf</span>
+                            </label>
+
+                            <label class="flex items-start space-x-2 bg-gray-50 p-2.5 rounded border border-gray-200 cursor-pointer hover:bg-yellow-50">
+                                <input type="checkbox" name="struggle" value="Feet Dangler" class="mt-0.5 rounded text-govNavy focus:ring-govNavy">
+                                <span>Feet dangle in the air when sitting on standard office chairs</span>
+                            </label>
+
+                            <label class="flex items-start space-x-2 bg-gray-50 p-2.5 rounded border border-gray-200 cursor-pointer hover:bg-yellow-50">
+                                <input type="checkbox" name="struggle" value="Front Row Photo Permanent" class="mt-0.5 rounded text-govNavy focus:ring-govNavy">
+                                <span>Always forced to sit/stand in the front row for group photos</span>
+                            </label>
+
+                            <label class="flex items-start space-x-2 bg-gray-50 p-2.5 rounded border border-gray-200 cursor-pointer hover:bg-yellow-50">
+                                <input type="checkbox" name="struggle" value="Beta Mummy Kaha Hai Victim" class="mt-0.5 rounded text-govNavy focus:ring-govNavy">
+                                <span>Shopkeepers still ask "Beta, mummy kaha hai?" despite being adult</span>
+                            </label>
+
+                            <label class="flex items-start space-x-2 bg-gray-50 p-2.5 rounded border border-gray-200 cursor-pointer hover:bg-yellow-50">
+                                <input type="checkbox" name="struggle" value="Concert Jumper" class="mt-0.5 rounded text-govNavy focus:ring-govNavy">
+                                <span>Cannot see anything at concerts without jumping repeatedly</span>
+                            </label>
+
+                            <label class="flex items-start space-x-2 bg-gray-50 p-2.5 rounded border border-gray-200 cursor-pointer hover:bg-yellow-50">
+                                <input type="checkbox" name="struggle" value="Extra Tailoring Needed" class="mt-0.5 rounded text-govNavy focus:ring-govNavy">
+                                <span>New pants always require cutting 4 inches off the bottom</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Section 4: Proof Upload -->
+                    <div class="space-y-3">
+                        <h3 class="text-xs font-extrabold uppercase tracking-wider text-govNavy border-b-2 border-gray-200 pb-1 flex items-center">
+                            <span class="bg-govNavy text-white w-5 h-5 rounded-full inline-flex items-center justify-center text-[10px] mr-2">4</span>
+                            Upload Height Scale Proof
+                        </h3>
+                        
+                        <div class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center bg-gray-50 hover:bg-white transition">
+                            <i class="fa-solid fa-bottle-water text-3xl text-govNavy mb-2"></i>
+                            <label class="block text-xs font-bold text-gray-700 mb-1 cursor-pointer">
+                                Upload Photo Standing Next to a 1-Litre Coke Bottle for Scale
+                            </label>
+                            <p class="text-[11px] text-gray-500 mb-2">(Optional verification bypass enabled for fast pension credit)</p>
+                            <input type="file" id="proofUpload" accept="image/*" class="text-xs text-gray-500 file:mr-4 file:py-1.5 file:px-3 file:rounded file:border-0 file:text-xs file:font-semibold file:bg-govNavy file:text-white hover:file:bg-blue-900 cursor-pointer">
+                        </div>
+                    </div>
+
+                    <!-- Section 5: Legal Captcha Declaration -->
+                    <div class="bg-yellow-50 border border-yellow-300 p-3 rounded">
+                        <label class="flex items-start space-x-2 cursor-pointer">
+                            <input type="checkbox" id="captchaCheck" required class="mt-0.5 rounded text-govNavy focus:ring-govNavy">
+                            <span class="text-xs font-bold text-gray-800">
+                                I solemnly declare under penalty of law that I am vertically challenged, and I am NOT currently wearing 3-inch heels, platform boots, or standing on my tiptoes while submitting this application. 🇮🇳
+                            </span>
+                        </label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="text-center pt-2">
+                        <button type="submit" id="submitBtn" class="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-govSaffron via-amber-500 to-govSaffron text-govNavy font-black text-base rounded shadow-lg hover:shadow-xl hover:scale-105 transition transform uppercase tracking-wider border-2 border-amber-600">
+                            <i class="fa-solid fa-stamp mr-2"></i> SUBMIT & CLAIM ₹3,000/MONTH PENSION NOW
+                        </button>
+                        <p class="text-[10px] text-gray-500 mt-2">Instant Approval Engine powered by Ministry of Short Stature AI</p>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-govNavy text-white border-t-4 border-govSaffron mt-8 py-6 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left text-xs text-gray-300 space-y-4 md:space-y-0">
+            <div>
+                <p class="font-bold text-white mb-1">Pradhan Mantri Bauna Kalyan Yojana (PM-BKY) Portal</p>
+                <p>Designed for entertainment & friend pranks. Designed under Ministry of Short Stature Welfare.</p>
+                <p class="text-[10px] text-gray-400 mt-1">© 2026 National Informatics Centre (NIC) - All Rights Reserved.</p>
+            </div>
+            <div class="flex items-center space-x-4 text-sm text-yellow-400">
+                <i class="fa-solid fa-shield-halved text-2xl"></i>
+                <i class="fa-solid fa-certificate text-2xl"></i>
+                <i class="fa-solid fa-building-columns text-2xl"></i>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL 1: SATELLITE VERIFICATION LOADING OVERLAY -->
+    <div id="loadingModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg shadow-2xl border-4 border-govNavy max-w-md w-full p-6 text-center space-y-5">
+            
+            <div class="relative w-20 h-20 mx-auto">
+                <!-- Outer spinning ring -->
+                <div class="absolute inset-0 rounded-full border-4 border-govSaffron border-t-transparent animate-spin"></div>
+                <!-- Inner Emblem -->
+                <div class="absolute inset-2 bg-govNavy rounded-full flex items-center justify-center text-yellow-400 text-2xl font-bold">
+                    <i class="fa-solid fa-ruler-vertical animate-pulse"></i>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-black text-govNavy uppercase font-official">Satellite Height Scanning</h3>
+                <p class="text-xs text-gray-500 mt-1">Please do not stretch your neck while scan is in progress...</p>
+            </div>
+
+            <!-- Progress Step Display -->
+            <div class="bg-gray-100 p-3 rounded border text-left text-xs font-mono space-y-2">
+                <div id="step1" class="flex items-center text-gray-400">
+                    <i class="fa-solid fa-spinner fa-spin mr-2"></i> 1. Connecting to Height Radar Satellite...
+                </div>
+                <div id="step2" class="flex items-center text-gray-400">
+                    <i class="fa-solid fa-circle mr-2 text-[8px]"></i> 2. Calculating Leg-to-Torso Shortness Ratio...
+                </div>
+                <div id="step3" class="flex items-center text-gray-400">
+                    <i class="fa-solid fa-circle mr-2 text-[8px]"></i> 3. Cross-checking with Kids Shoe Database...
+                </div>
+                <div id="step4" class="flex items-center text-gray-400">
+                    <i class="fa-solid fa-circle mr-2 text-[8px]"></i> 4. Final approval from Minister of Short Stature...
+                </div>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="w-full bg-gray-200 rounded-full h-2.5 overflow-hidden">
+                <div id="progressBar" class="bg-govSaffron h-2.5 rounded-full w-0 transition-all duration-300"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- MODAL 2: CERTIFIED BAUNA ID CARD & MEME REVEAL -->
+    <div id="certificateModal" class="fixed inset-0 bg-black/90 backdrop-blur-md z-50 hidden flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
+        <div class="bg-white rounded-xl shadow-2xl max-w-xl w-full border-4 border-govNavy overflow-hidden my-auto relative transform transition-all">
+            
+            <!-- Modal Header -->
+            <div class="bg-govNavy text-white p-3 text-center relative border-b-4 border-govSaffron">
+                <span class="bg-red-600 text-white font-extrabold text-[10px] px-3 py-0.5 rounded-full uppercase tracking-widest inline-block mb-1 animate-pulse">
+                    OFFICIAL APPROVAL ISSUED
+                </span>
+                <h2 class="text-lg sm:text-xl font-black uppercase font-hindi tracking-wide">
+                    प्रधानमंत्री बौना कल्याण योजना
+                </h2>
+                <p class="text-xs text-yellow-300 font-official">MINISTRY OF SHORT AFFAIRS & VERTICAL EQUALITY</p>
+                <button onclick="closeModal()" class="absolute right-3 top-3 text-gray-300 hover:text-white text-xl">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Certificate Visual Box (Target for rendering) -->
+            <div id="idCardContent" class="p-6 bg-amber-50/40 relative">
+                
+                <!-- Background Seal Watermark -->
+                <div class="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none">
+                    <i class="fa-solid fa-award text-[250px] text-govNavy"></i>
+                </div>
+
+                <!-- Approval Stamp Graphic -->
+                <div class="absolute top-8 right-6 stamp-rotate border-4 border-red-600 rounded-lg px-3 py-1 text-center bg-white/80 shadow-md z-10">
+                    <span class="text-red-600 font-black text-xl uppercase tracking-wider block leading-none">APPROVED</span>
+                    <span class="text-red-700 font-bold text-[10px] uppercase block">₹3,000 / Month Credited</span>
+                    <span class="text-[8px] font-mono text-red-600">VERIFIED BAUNA</span>
+                </div>
+
+                <!-- ID Card Header -->
+                <div class="flex items-center space-x-3 border-b-2 border-govNavy pb-3 mb-4">
+                    <div class="w-14 h-14 bg-govNavy rounded-full flex items-center justify-center text-yellow-400 text-2xl font-bold border-2 border-govSaffron flex-shrink-0">
+                        <i class="fa-solid fa-user-astronaut"></i>
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-extrabold text-govSaffron uppercase tracking-widest block">CERTIFICATE OF SHORT STATURE</span>
+                        <h3 class="text-base font-extrabold text-govNavy uppercase font-official">NATIONAL BAUNA ID CARD</h3>
+                        <p class="text-[10px] text-gray-500">ID No: <span id="cardAppId" class="font-mono font-bold text-gray-800">BKY-2026-8842</span></p>
+                    </div>
+                </div>
+
+                <!-- Details Grid -->
+                <div class="grid grid-cols-2 gap-3 text-xs mb-4 bg-white p-3.5 rounded-lg border border-yellow-200 shadow-sm">
+                    <div>
+                        <span class="text-gray-500 text-[10px] block uppercase font-bold">Applicant Name</span>
+                        <span id="cardName" class="font-black text-sm text-govNavy capitalize">--</span>
+                    </div>
+                    <div>
+                        <span class="text-gray-500 text-[10px] block uppercase font-bold">Guardian Name</span>
+                        <span id="cardGuardian" class="font-bold text-gray-800 capitalize">--</span>
+                    </div>
+                    <div>
+                        <span class="text-gray-500 text-[10px] block uppercase font-bold">Verified Height</span>
+                        <span id="cardHeight" class="font-black text-sm text-red-600">--</span>
+                    </div>
+                    <div>
+                        <span class="text-gray-500 text-[10px] block uppercase font-bold">Shoe Category</span>
+                        <span id="cardShoe" class="font-bold text-gray-800">--</span>
+                    </div>
+                </div>
+
+                <!-- Verified Struggles Remark -->
+                <div class="bg-yellow-100 border-l-4 border-govSaffron p-3 rounded text-xs mb-4">
+                    <span class="font-bold text-govNavy block text-[11px] uppercase"><i class="fa-solid fa-triangle-exclamation text-govSaffron mr-1"></i> Official Board Remark:</span>
+                    <p id="cardStruggles" class="text-gray-700 italic mt-0.5 text-[11px]">
+                        Applicant confirmed to dangling feet in office chairs and using kitchen stools. Fully qualified for ₹3,000/month height pension.
+                    </p>
+                </div>
+
+                <!-- Signatures -->
+                <div class="flex justify-between items-end pt-2 border-t border-gray-300">
+                    <div class="text-center">
+                        <div class="font-serif italic text-xs font-bold text-gray-600 border-b border-gray-400 px-2 pb-0.5">Dr. Chhotu Ram</div>
+                        <span class="text-[9px] text-gray-500 block uppercase font-semibold">Director, Dept of Short Affairs</span>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-mono text-[10px] font-bold text-govNavy border-b border-gray-400 px-2 pb-0.5" id="cardDate">2026-11-20</div>
+                        <span class="text-[9px] text-gray-500 block uppercase font-semibold">Issue Date</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Sound Controller & Action Buttons Bar -->
+            <div class="bg-gray-100 p-4 border-t border-gray-200 flex flex-col sm:flex-row gap-2 justify-between items-center">
+                <!-- Replay Laugh Sound Button -->
+                <button onclick="playMemeAudio()" class="w-full sm:w-auto px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-xs font-bold rounded flex items-center justify-center space-x-2 shadow transition">
+                    <i class="fa-solid fa-volume-high text-sm animate-bounce"></i>
+                    <span>🔊 REPLAY MEME LAUGH</span>
+                </button>
+
+                <div class="flex gap-2 w-full sm:w-auto">
+                    <!-- Download PNG Button -->
+                    <button onclick="downloadIDCard()" class="flex-1 sm:flex-initial px-4 py-2 bg-govGreen hover:bg-green-700 text-white text-xs font-bold rounded flex items-center justify-center space-x-1 shadow transition">
+                        <i class="fa-solid fa-download"></i>
+                        <span>Download ID PNG</span>
+                    </button>
+
+                    <!-- Reset / Prank Another -->
+                    <button onclick="resetPrank()" class="flex-1 sm:flex-initial px-4 py-2 bg-govNavy hover:bg-blue-900 text-white text-xs font-bold rounded flex items-center justify-center space-x-1 shadow transition">
+                        <i class="fa-solid fa-rotate-right"></i>
+                        <span>Prank Another</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Hidden Canvas Element for PNG Card Rendering -->
+    <canvas id="cardCanvas" width="600" height="420" class="hidden"></canvas>
+
+    <!-- JavaScript Logic & Audio Synth -->
+    <script>
+        // -------------------------------------------------------------
+        // 1. DYNAMIC LIVE HEIGHT VALIDATION LOGIC
+        // -------------------------------------------------------------
+        function validateHeight() {
+            const heightInput = document.getElementById('heightInput');
+            const alertBox = document.getElementById('heightAlert');
+            const submitBtn = document.getElementById('submitBtn');
+            const val = parseFloat(heightInput.value);
+
+            if (!val) {
+                alertBox.className = "hidden";
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+                return;
+            }
+
+            // Convert to feet and inches for funny government feedback
+            const totalInches = val / 2.54;
+            const feet = Math.floor(totalInches / 12);
+            const inches = Math.round(totalInches % 12);
+
+            if (val > 162) {
+                // Too tall alert
+                alertBox.className = "block bg-red-100 border-l-4 border-red-600 p-3 rounded text-xs text-red-900 font-medium space-y-1";
+                alertBox.innerHTML = `
+                    <div class="flex items-center font-bold text-red-700 text-sm">
+                        <i class="fa-solid fa-ban text-base mr-2"></i> ELIGIBILITY REJECTED: You are TOO TALL!
+                    </div>
+                    <p>Your height of <strong>${val} cm (${feet}'${inches}")</strong> exceeds the maximum allowed Bauna Bhatta threshold of <strong>162 cm (5'4")</strong>.</p>
+                    <p class="text-[11px] text-red-700 italic">Please shrink your spine or adjust your input to 162 cm or below to proceed.</p>
+                `;
+                submitBtn.disabled = true;
+                submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
+            } else {
+                // Eligible Bauna alert
+                alertBox.className = "block bg-green-100 border-l-4 border-govGreen p-3 rounded text-xs text-green-900 font-medium";
+                alertBox.innerHTML = `
+                    <div class="flex items-center font-bold text-govGreen">
+                        <i class="fa-solid fa-circle-check text-base mr-2"></i> ELIGIBLE FOR BAUNA PENSION!
+                    </div>
+                    <p>Height of <strong>${val} cm (${feet}'${inches}")</strong> strictly verified under Short Stature Standards. You qualify for ₹3,000/month.</p>
+                `;
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+            }
+        }
+
+        // Live Counter Incrementer Effect
+        setInterval(() => {
+            const counter = document.getElementById('liveCounter');
+            let current = parseInt(counter.innerText.replace(/,/g, ''));
+            counter.innerText = (current + Math.floor(Math.random() * 3) + 1).toLocaleString();
+        }, 4000);
+
+        // -------------------------------------------------------------
+        // 2. WEB AUDIO API SYNTHESIZER (MEME LAUGH & TROMBONE STINGER)
+        // -------------------------------------------------------------
+        function playMemeAudio() {
+            try {
+                const AudioContext = window.AudioContext || window.webkitAudioContext;
+                if (!AudioContext) return;
+                const ctx = new AudioContext();
+                const now = ctx.currentTime;
+
+                // --- Part A: Infectious Modulated Giggle / Laugh Sound ---
+                // Sequence of quick pitch-bend sawtooth bursts
+                const laughPattern = [
+                    { freq: 440, delay: 0.00, dur: 0.12, gain: 0.35 },
+                    { freq: 410, delay: 0.14, dur: 0.12, gain: 0.40 },
+                    { freq: 380, delay: 0.28, dur: 0.14, gain: 0.45 },
+                    { freq: 480, delay: 0.48, dur: 0.12, gain: 0.45 },
+                    { freq: 450, delay: 0.62, dur: 0.12, gain: 0.40 },
+                    { freq: 420, delay: 0.76, dur: 0.15, gain: 0.45 },
+                    { freq: 520, delay: 1.00, dur: 0.16, gain: 0.50 },
+                    { freq: 490, delay: 1.18, dur: 0.12, gain: 0.45 },
+                    { freq: 440, delay: 1.32, dur: 0.14, gain: 0.40 },
+                    { freq: 360, delay: 1.48, dur: 0.28, gain: 0.55 },
+                    // Laugh burst 2
+                    { freq: 490, delay: 1.85, dur: 0.12, gain: 0.40 },
+                    { freq: 460, delay: 2.00, dur: 0.12, gain: 0.40 },
+                    { freq: 430, delay: 2.15, dur: 0.12, gain: 0.40 },
+                    { freq: 390, delay: 2.30, dur: 0.35, gain: 0.55 },
+                ];
+
+                laughPattern.forEach(note => {
+                    const osc = ctx.createOscillator();
+                    const gain = ctx.createGain();
+                    const filter = ctx.createBiquadFilter();
+
+                    osc.type = 'sawtooth';
+                    osc.frequency.setValueAtTime(note.freq, now + note.delay);
+                    // Fast downward pitch bend mimicking "ha!"
+                    osc.frequency.exponentialRampToValueAtTime(note.freq * 0.7, now + note.delay + note.dur);
+
+                    // Voice-like formant filter
+                    filter.type = 'bandpass';
+                    filter.frequency.setValueAtTime(1100, now + note.delay);
+                    filter.Q.setValueAtTime(3.5, now + note.delay);
+
+                    gain.gain.setValueAtTime(0.01, now + note.delay);
+                    gain.gain.linearRampToValueAtTime(note.gain, now + note.delay + 0.02);
+                    gain.gain.exponentialRampToValueAtTime(0.001, now + note.delay + note.dur);
+
+                    osc.connect(filter);
+                    filter.connect(gain);
+                    gain.connect(ctx.destination);
+
+                    osc.start(now + note.delay);
+                    osc.stop(now + note.delay + note.dur + 0.05);
+                });
+
+                // --- Part B: Cartoon "Sad Trombone / Wah-Wah" Meme Stinger ---
+                const stingerStart = 2.8;
+                const tromboneNotes = [
+                    { pitch: 311.13, start: 0.00, dur: 0.30 }, // Eb4
+                    { pitch: 293.66, start: 0.35, dur: 0.30 }, // D4
+                    { pitch: 277.18, start: 0.70, dur: 0.30 }, // Db4
+                    { pitch: 261.63, start: 1.05, dur: 0.85, slide: true } // C4 with pitch drop
+                ];
+
+                tromboneNotes.forEach(tn => {
+                    const osc = ctx.createOscillator();
+                    const gain = ctx.createGain();
+
+                    osc.type = 'sawtooth';
+                    const startTime = now + stingerStart + tn.start;
+                    osc.frequency.setValueAtTime(tn.pitch, startTime);
+
+                    if (tn.slide) {
+                        // Dramatic downward pitch slide
+                        osc.frequency.linearRampToValueAtTime(tn.pitch * 0.65, startTime + tn.dur);
+                    }
+
+                    gain.gain.setValueAtTime(0.3, startTime);
+                    gain.gain.exponentialRampToValueAtTime(0.001, startTime + tn.dur);
+
+                    osc.connect(gain);
+                    gain.connect(ctx.destination);
+
+                    osc.start(startTime);
+                    osc.stop(startTime + tn.dur + 0.05);
+                });
+
+            } catch (e) {
+                console.log("Audio synthesis notice:", e);
+            }
+        }
+
+        // -------------------------------------------------------------
+        // 3. FORM SUBMISSION & SATELLITE SCAN PROCESSOR
+        // -------------------------------------------------------------
+        function handleFormSubmit(e) {
+            e.preventDefault();
+
+            const heightVal = parseFloat(document.getElementById('heightInput').value);
+            if (heightVal > 162) {
+                alert("APPLICATION REJECTED: You are above 162cm! Please reduce your height input to apply.");
+                return;
+            }
+
+            // Immediately trigger Web Audio on user gesture
+            playMemeAudio();
+
+            // Show loading overlay
+            const loadingModal = document.getElementById('loadingModal');
+            const progressBar = document.getElementById('progressBar');
+            loadingModal.classList.remove('hidden');
+
+            const steps = [
+                { id: 'step1', text: '✓ Satellite radar lock on applicant...', pct: 25, delay: 700 },
+                { id: 'step2', text: '✓ Leg-to-Torso Ratio: 100% Short Stature', pct: 50, delay: 1500 },
+                { id: 'step3', text: '✓ Kids Shoe Database Matched!', pct: 75, delay: 2300 },
+                { id: 'step4', text: '✓ Approved by Minister of Short Stature!', pct: 100, delay: 3200 }
+            ];
+
+            steps.forEach(s => {
+                setTimeout(() => {
+                    const el = document.getElementById(s.id);
+                    el.className = "flex items-center text-govGreen font-bold";
+                    el.innerHTML = `<i class="fa-solid fa-circle-check mr-2"></i> ${s.text}`;
+                    progressBar.style.width = `${s.pct}%`;
+                }, s.delay);
+            });
+
+            // Reveal Certificate after 3.5s
+            setTimeout(() => {
+                loadingModal.classList.add('hidden');
+                populateCertificateCard();
+                document.getElementById('certificateModal').classList.remove('hidden');
+            }, 3600);
+        }
+
+        // -------------------------------------------------------------
+        // 4. POPULATE DYNAMIC CERTIFICATE DETAILS
+        // -------------------------------------------------------------
+        function populateCertificateCard() {
+            const name = document.getElementById('applicantName').value || 'Chhotu';
+            const guardian = document.getElementById('guardianName').value || 'Lambu';
+            const height = document.getElementById('heightInput').value || '150';
+            const shoe = document.getElementById('shoeSize').value || 'Kids Section (UK 4)';
+
+            // Generate Random ID
+            const appId = 'BKY-2026-' + Math.floor(1000 + Math.random() * 9000);
+
+            // Feet conversion
+            const inchesTotal = height / 2.54;
+            const ft = Math.floor(inchesTotal / 12);
+            const inch = Math.round(inchesTotal % 12);
+
+            // Collect Struggles
+            const checkedBoxes = document.querySelectorAll('input[name="struggle"]:checked');
+            let strugglesList = [];
+            checkedBoxes.forEach(cb => strugglesList.push(cb.value));
+
+            let remarkText = "Applicant confirmed vertically challenged. Fully qualified for ₹3,000/month height pension.";
+            if (strugglesList.length > 0) {
+                remarkText = `Certified Bauna struggles: ${strugglesList.join(", ")}. Verified eligible for ₹3,000/month height pension.`;
+            }
+
+            document.getElementById('cardName').innerText = name;
+            document.getElementById('cardGuardian').innerText = guardian;
+            document.getElementById('cardHeight').innerText = `${height} cm (${ft}'${inch}")`;
+            document.getElementById('cardShoe').innerText = shoe;
+            document.getElementById('cardAppId').innerText = appId;
+            document.getElementById('cardStruggles').innerText = remarkText;
+
+            // Date
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('cardDate').innerText = today;
+        }
+
+        function closeModal() {
+            document.getElementById('certificateModal').classList.add('hidden');
+        }
+
+        function resetPrank() {
+            closeModal();
+            document.getElementById('baunaForm').reset();
+            document.getElementById('heightAlert').className = 'hidden';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // -------------------------------------------------------------
+        // 5. DOWNLOAD CERTIFICATE AS PNG IMAGE (HTML5 CANVAS)
+        // -------------------------------------------------------------
+        function downloadIDCard() {
+            const canvas = document.getElementById('cardCanvas');
+            const ctx = canvas.getContext('2d');
+
+            const name = document.getElementById('cardName').innerText;
+            const guardian = document.getElementById('cardGuardian').innerText;
+            const height = document.getElementById('cardHeight').innerText;
+            const shoe = document.getElementById('cardShoe').innerText;
+            const appId = document.getElementById('cardAppId').innerText;
+            const dateStr = document.getElementById('cardDate').innerText;
+
+            // Clear Background
+            ctx.fillStyle = "#FFFBEB"; // light amber
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Outer Border
+            ctx.strokeStyle = "#002147";
+            ctx.lineWidth = 10;
+            ctx.strokeRect(5, 5, canvas.width - 10, canvas.height - 10);
+
+            // Inner Saffron Line
+            ctx.strokeStyle = "#FF9933";
+            ctx.lineWidth = 3;
+            ctx.strokeRect(15, 15, canvas.width - 30, canvas.height - 30);
+
+            // Top Header Box
+            ctx.fillStyle = "#002147";
+            ctx.fillRect(20, 20, canvas.width - 40, 75);
+
+            // Header Text
+            ctx.fillStyle = "#FFFFFF";
+            ctx.font = "bold 20px sans-serif";
+            ctx.textAlign = "center";
+            ctx.fillText("प्रधानमंत्री बौना कल्याण योजना (PM-BKY)", canvas.width / 2, 50);
+
+            ctx.fillStyle = "#FF9933";
+            ctx.font = "bold 11px sans-serif";
+            ctx.fillText("MINISTRY OF SHORT AFFAIRS & VERTICAL EQUALITY", canvas.width / 2, 72);
+
+            // Title Banner
+            ctx.fillStyle = "#002147";
+            ctx.font = "extrabold 16px sans-serif";
+            ctx.fillText("OFFICIAL CERTIFIED BAUNA ID CARD", canvas.width / 2, 125);
+
+            // App ID
+            ctx.fillStyle = "#666666";
+            ctx.font = "12px monospace";
+            ctx.fillText("ID: " + appId, canvas.width / 2, 142);
+
+            // Details Box
+            ctx.textAlign = "left";
+            ctx.fillStyle = "#111827";
+            ctx.font = "bold 13px sans-serif";
+            
+            ctx.fillText("Applicant Name: " + name, 50, 185);
+            ctx.fillText("Guardian Name: " + guardian, 50, 215);
+            ctx.fillText("Verified Height: " + height, 50, 245);
+            ctx.fillText("Shoe Size: " + shoe, 50, 275);
+            ctx.fillText("Monthly Pension: ₹3,000 / Month Credited", 50, 305);
+
+            // DRAW RED APPROVED STAMP GRAPHIC
+            ctx.save();
+            ctx.translate(450, 220);
+            ctx.rotate(-0.2);
+            ctx.strokeStyle = "#CC0000";
+            ctx.lineWidth = 4;
+            ctx.strokeRect(-80, -35, 160, 70);
+            ctx.fillStyle = "#CC0000";
+            ctx.font = "bold 22px sans-serif";
+            ctx.textAlign = "center";
+            ctx.fillText("APPROVED", 0, -5);
+            ctx.font = "bold 10px sans-serif";
+            ctx.fillText("VERIFIED BAUNA", 0, 15);
+            ctx.fillText("₹3,000 / MONTH", 0, 27);
+            ctx.restore();
+
+            // Footer Signature
+            ctx.fillStyle = "#4B5563";
+            ctx.font = "italic 12px serif";
+            ctx.fillText("Dr. Chhotu Ram (Director)", 50, 370);
+            ctx.font = "10px sans-serif";
+            ctx.fillText("Dept of Short Stature Welfare", 50, 385);
+
+            ctx.fillText("Issue Date: " + dateStr, 420, 370);
+            ctx.fillText("Government of India", 420, 385);
+
+            // Trigger Download
+            const link = document.createElement('a');
+            link.download = `Certified_Bauna_Card_${name.replace(/\s+/g, '_')}.png`;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+    </script>
+</body>
+</html>
